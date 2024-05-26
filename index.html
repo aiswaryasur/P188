@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+   
+    <title>Herbalife</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+    <script src="js/Herb.js"></script>
+    <script src="js/CursorEvents.js"></script>
+    <script src="js/Infobanner.js"></script>
+  </head>
+  <body>
+    <a-scene id="main-scene">
+      <a-sky id="main-container" radius="5000" color="#98DAFC"></a-sky>
+
+      <a-entity id="places-container" herbs></a-entity>
+
+      <a-camera id="camera" wasd-controls="enabled:false;">
+
+        <a-entity
+        id="app-title"
+        position="0 0.73 -1"
+        text="font: exo2bold; align: center; width: 2; color: #000; value: HERBALIFE !"
+      >
+
+      <a-entity
+            id="app-subtitle"
+            position="0 -0.1 0"
+            text="font: dejavu; align: center; width: 1; color: #0F184E; value: Best herbs that can be planted in home"
+          ></a-entity>
+
+          <a-entity
+          id="basil"
+          position="-0.9 -1.2 0"
+          text="font: dejavu; align: center; width: 2; color: #0F184E; value: Basil"
+        ></a-entity>
+
+        <a-entity
+        id="thyme"
+        position="-0.25 -1.2 0"
+        text="font: dejavu; align: center; width: 2; color: #0F184E; value: Thyme"
+      ></a-entity>
+
+        <a-entity
+          id="parsley"
+          position="0.35 -1.2 0"
+          text="font: dejavu; align: center; width: 2; color: #0F184E; value: Parsley"
+        ></a-entity>
+
+        <a-entity
+        id="oregano"
+        position="1 -1.2 0"
+        text="font: dejavu; align: center; width: 2; color: #0F184E; value: Oregano"
+      ></a-entity>
+        </a-entity>
+
+        <a-entity
+          id="fadeBackground"
+          geometry="primitive: sphere; radius: 2.5"
+          visible="false"      
+          >
+        </a-entity>
+
+        <a-entity
+        id="camera-cursor"
+        cursor
+        position="0 0 -1"
+        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+        material="color: #F5A719; shader: flat"
+      >
+        </a-entity>
+
+    </a-scene>
+
+  </body>
+</html>
